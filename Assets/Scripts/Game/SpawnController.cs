@@ -9,9 +9,9 @@ public class SpawnController : MonoBehaviour
     public Transform spawnPosition;
     // Patterns of Spawn poins
     public GameObject[] patterns;
+    public float startWait = 1f;
     // Time between Waves
     public float interval;
-
     bool spawning;
 
     // Start is called before the first frame update
@@ -30,6 +30,7 @@ public class SpawnController : MonoBehaviour
     }
 
     IEnumerator SpawnPatterns() {
+        yield return new WaitForSeconds(startWait);
         while(spawning) {
             GameObject pattern = RandomPattern();
 

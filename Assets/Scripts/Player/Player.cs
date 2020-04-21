@@ -2,38 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Player Master Class
+// Player Master Class: Status and Animations
 public class Player : MonoBehaviour
 {
-    public float speed;
-    // Distance of each Moves
-    public float range;
-
-    Vector3 targetPos;
+    // References
+    SnapController controller;
+    Animator animator;
     bool alive;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Origin
-        targetPos = transform.position;
+        controller = GetComponent<SnapController>();
+        animator = GetComponent<Animator>();
         // Alive
-        alive = true;   
+        alive = true;  
     }
 
-    // Update Actions if Still playing
+    // Stop Controlling if Game Over
     void Update()
     {
-        if (alive) {
-            MovePlayer();
-            InputHandling();
+        if (!alive) {
+            controller.enabled = false;
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other) {
-        // Die on touching Obstacles
-        if (other.gameObject.CompareTag("Obstacle")) {
-            alive = false;
+    void OnTriggerEnter2D(Collider2D collider) {
+         // Die on touching Obstacles
+        if (collider.gameObject.CompareTag("Obstacle")) {
+            Die();
         }
     }
 
@@ -41,26 +38,8 @@ public class Player : MonoBehaviour
         return alive;
     }
 
-    // Receive & Process Inputs
-    void InputHandling() {
-        float movement = 0;
-        if (Input.GetKeyDown(KeyCode.UpArrow)) {
-           movement = 1;
-        } else if (Input.GetKeyDown(KeyCode.DownArrow)) {
-            movement = -1;
-        }
-        // Fixed Move Steps
-        movement *= range;
-        // DOn't move along the X axis
-        targetPos = new Vector3(transform.position.x, transform.position.y + movement, transform.position.z);
-    }
-
-    // Player Fixed Movements
-    void MovePlayer() {
-        while (transform.position != targetPos) {
-            transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-            // Clamping
-            transform.position = new Vector2(transform.position.x, Mathf.Clamp(transform.position.y, -range, range));
-        }
+    void Die() {
+        alive = false;
+        animator.SetTrigger("Die");
     }
 }

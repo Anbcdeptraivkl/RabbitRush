@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8164471266798307177}
   - component: {fileID: 8164471266798307176}
   - component: {fileID: 8164471266798307179}
+  - component: {fileID: 8164471267928340004}
+  - component: {fileID: 8164471267928340005}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -73,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 182e073e834af424eb0be1f8040c03ce, type: 3}
+  m_Sprite: {fileID: -61303544629183656, guid: e6ed3f3597cf76b449b82441b340700f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -115,14 +117,14 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.6666667, y: 2.6666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -143,5 +145,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a451572b2ea914eb7e655b10f83114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+--- !u!95 &8164471267928340004
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164471266798307178}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8e9fe91bcc30a6846958d6f03894df00, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8164471267928340005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164471266798307178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701c58d8a87d64d418d50690ff4c6125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
   range: 3

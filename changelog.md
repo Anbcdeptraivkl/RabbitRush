@@ -2,6 +2,19 @@
 
 ## [Unreleased]
 
+
+## [Prototype 2] - 21/4/2020
+
+### Added
+- Scoring SYstem and Score UI
+- Player's Animations: Starting + Running and Dying
+- Added Start Delays to Spawner and Score Counter
+- Added UI for In-game Information
+
+### Changed
+- Break the Player Script into Status and Snap Movement Controller seperatedly
+
+
 ## [Gameplay Prototype] - 13/4/2020
 
 ### Added
