@@ -2,6 +2,19 @@
 
 ## [Unreleased]
 
+### Added
+- High Score: Reset in Main Menu
+- Game Over Menu showing Score
+- Pausing and Unpausing with Menu
+- Menu and Button Tooltips
+
+### Changed
+- Tweak the Move Speed of Obstacles
+
+### Fixed
+- Fixed when Score doesn't reset on new playthrough
+- Fixed wrongly Looped animations
+
 
 ## [Prototype 2] - 21/4/2020
 

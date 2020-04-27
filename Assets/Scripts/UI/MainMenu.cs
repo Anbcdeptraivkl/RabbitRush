@@ -13,4 +13,8 @@ public class MainMenu: MonoBehaviour {
     public void Quit() {
         Application.Quit();
     }
+
+    public void ResetHighScore() {
+        PlayerPrefs.SetInt("High Score", 0);
+    }
 }
