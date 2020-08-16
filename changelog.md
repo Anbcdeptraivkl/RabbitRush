@@ -2,14 +2,21 @@
 
 ## [Unreleased]
 
+## [Prototype 3] - 16/8/2020
+
 ### Added
 - High Score: Reset in Main Menu
 - Game Over Menu showing Score
 - Pausing and Unpausing with Menu
 - Menu and Button Tooltips
+- Pixel Arts Intergrations
+  - Pixelated Font
+  - Running Lane
+  - Visual Effects
 
 ### Changed
 - Tweak the Move Speed of Obstacles
+- Updated the Arts and Layouts of the Play Scene
 
 ### Fixed
 - Fixed when Score doesn't reset on new playthrough

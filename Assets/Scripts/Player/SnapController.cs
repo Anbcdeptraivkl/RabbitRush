@@ -9,12 +9,14 @@ public class SnapController : MonoBehaviour
     // Distance of each Moves
     public float range;
     Vector3 targetPos;
+    Vector3 origin;
 
     // Start is called before the first frame update
     void Start()
     {
         // Origin
-        targetPos = transform.position;
+        origin = transform.position;
+        targetPos = origin;
         // Alive
     }
 
@@ -37,14 +39,14 @@ public class SnapController : MonoBehaviour
         movement *= range;
         // DOn't move along the X axis
         targetPos = new Vector3(transform.position.x, transform.position.y + movement, transform.position.z);
+        // Clamping: Fixing the Snap controller to the same range and Coordinates in the editor
+        targetPos.y = Mathf.Clamp(targetPos.y, origin.y -range, origin.y + range);
     }
 
     // Player Fixed Movements
     void MovePlayer() {
         while (transform.position != targetPos) {
             transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-            // Clamping
-            transform.position = new Vector2(transform.position.x, Mathf.Clamp(transform.position.y, -range, range));
         }
     }
 }

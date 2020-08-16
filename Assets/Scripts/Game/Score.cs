@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// COntroller for Scoring system: the longer Player survive the more score gained
+// COntroller for Scoring system: 
+// - the longer Player survive the more score gained
+// - Add Score when Getting Collectibles
 // - Also Control High Score Setting and Saving
 public class Score: MonoBehaviour {
     public float timeStep = 1f;
@@ -29,6 +31,11 @@ public class Score: MonoBehaviour {
             Debug.Log("No High Score");
             return false;
         }
+    }
+
+    // Add Score to the Score Base
+    public void AddScore(int adding = 1) {
+        score += adding;
     }
 
     void Start() {

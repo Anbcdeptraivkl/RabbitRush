@@ -18,7 +18,7 @@ public class Tooltip : MonoBehaviour
     }
 
     public void Activate(string tip) {
-        //Positioning
+        //Positioning depend on at the top or the bottom part of the screen
         if (transform.position.y < Screen.height / 2) {
             GetComponent<RectTransform>().pivot = new Vector2(0, 0);
         } else {
