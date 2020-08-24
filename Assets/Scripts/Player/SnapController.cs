@@ -3,32 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Character Snapping Limitted Movements
-public class SnapController : MonoBehaviour
+public class SnapController : Movement
 {
-    public float speed;
-    // Distance of each Moves
-    public float range;
-    Vector3 targetPos;
-    Vector3 origin;
-
     // Start is called before the first frame update
     void Start()
-    {
-        // Origin
-        origin = transform.position;
-        targetPos = origin;
-        // Alive
+    { 
+        base.Start();
     }
 
-    // Update Actions if Still playing
-    void Update()
-    {
+    void LateUpdate() {
         MovePlayer();
         InputHandling();
     }
 
     // Receive & Process Inputs
-    void InputHandling() {
+    protected void InputHandling() {
         float movement = 0;
         if (Input.GetKeyDown(KeyCode.UpArrow)) {
            movement = 1;
@@ -41,12 +30,5 @@ public class SnapController : MonoBehaviour
         targetPos = new Vector3(transform.position.x, transform.position.y + movement, transform.position.z);
         // Clamping: Fixing the Snap controller to the same range and Coordinates in the editor
         targetPos.y = Mathf.Clamp(targetPos.y, origin.y -range, origin.y + range);
-    }
-
-    // Player Fixed Movements
-    void MovePlayer() {
-        while (transform.position != targetPos) {
-            transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-        }
     }
 }

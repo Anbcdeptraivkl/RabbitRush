@@ -6,7 +6,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // References
-    SnapController controller;
+    //  - The Type of Controller using
+    Movement controller;
     Score scoreMng;
     Animator animator;
     bool alive;
@@ -21,9 +22,10 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<SnapController>();
         animator = GetComponent<Animator>();
         scoreMng = GameObject.FindWithTag("GameController").GetComponent<Score>();
+        // One Controller per Scene
+        controller = GameObject.FindWithTag("Player").GetComponent<Movement>();
         // Alive
         alive = true;  
     }
@@ -32,7 +34,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (!alive) {
-            controller.enabled = false;
+            // Disable MOvement Controller Component
+            if (controller.enabled) {
+                controller.StopMoving();
+                controller.enabled = false;
+            }
         }
     }
 

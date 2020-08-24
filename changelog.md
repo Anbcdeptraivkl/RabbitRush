@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## [Prototype 4] - 24/8/2020
+
+### Added
+- Mobile Supports
+  - Touch Inputs: Swiping to Move
+  - Remote Developer Settings
+  - UI Pause Button
+- Pixel Perfect Sprites and Quality Settings
+
+
 ## [Prototype 3] - 16/8/2020
 
 ### Added

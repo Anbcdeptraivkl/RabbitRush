@@ -27,6 +27,14 @@ public class Pause : MonoBehaviour
         pausing = false;
     }
 
+    public void TogglePause() {
+         if (pausing) {
+            Unpause();
+        } else {
+            Pausing();
+        }
+    }
+
     void Start() {
         Time.timeScale = 1;
         // Disable by Default
@@ -40,11 +48,7 @@ public class Pause : MonoBehaviour
     void Update() {
         // Toggling Pausing
         if (Input.GetButtonDown("Pause")) {
-            if (pausing) {
-                Unpause();
-            } else {
-                Pausing();
-            }
+           TogglePause();
         }
     }
 

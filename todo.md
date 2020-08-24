@@ -15,5 +15,10 @@
 - Wolf (need to be kicked!)
 
 # [UI]
-- Menu ELements
+
+## ANDROID
+
+- Disable Movements on Game Over
+
+### Menu ELements
 - UI ANimations and Transitions
