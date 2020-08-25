@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+- High Score: Storing, Viewing and Reseting
+
+
 ## [Prototype 4] - 24/8/2020
 
 ### Added
@@ -10,6 +14,9 @@
   - Remote Developer Settings
   - UI Pause Button
 - Pixel Perfect Sprites and Quality Settings
+
+### Fixed
+- DIabled Movements on Game Over
 
 
 ## [Prototype 3] - 16/8/2020

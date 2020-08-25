@@ -3,22 +3,27 @@
 ## NEW MECHANICS
 
 ### Actions
-- Jumping
 - Jump-kicking
 
 ### Upgrades
 - FLying with Owl
 - Invicinble Buff!
 
-## NEW OBSTACLES
-- Fences
-- Wolf (need to be kicked!)
+### Wolf
+-  Very Fast moving 
+-  Big sizes!
+-  Won't spawn Overlapping with Holes
+-  Could be Fly-kicked!
+
+### Progression
+- The Longer you play, the Faster the Speed become
+  - Scroll Speed
+  - Move SPeed of Obstacle
+
 
 # [UI]
 
 ## ANDROID
-
-- Disable Movements on Game Over
 
 ### Menu ELements
 - UI ANimations and Transitions

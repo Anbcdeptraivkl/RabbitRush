@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 // Main Menu Functionalities
 public class MainMenu: MonoBehaviour {
 
+    public GameObject highScorePanel;
+
     public void Play() {
         SceneManager.LoadScene(1);
     }
@@ -14,7 +16,11 @@ public class MainMenu: MonoBehaviour {
         Application.Quit();
     }
 
-    public void ResetHighScore() {
-        PlayerPrefs.SetInt("High Score", 0);
+    public void ShowHighScorePanel() {
+        highScorePanel.SetActive(true);
+    }
+
+    public void HideHighScorePanel() {
+        highScorePanel.SetActive(false);
     }
 }
