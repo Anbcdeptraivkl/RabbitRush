@@ -1,5 +1,10 @@
 # [PROGRAMMING]
 
+## DIFFICULTY
+- Scrolling Background without Material Offseting
+- Faster Spawning
+- Increasing Speeds of everything after every 200 Points
+
 ## NEW MECHANICS
 
 ### Actions
@@ -24,6 +29,9 @@
 # [UI]
 
 ## ANDROID
+
+### Black Boxes
+- Hiding the Corners of the Screen
 
 ### Menu ELements
 - UI ANimations and Transitions

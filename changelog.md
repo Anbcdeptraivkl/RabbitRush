@@ -5,6 +5,9 @@
 ### Added
 - High Score: Storing, Viewing and Reseting
 
+### Fixed
+
+
 
 ## [Prototype 4] - 24/8/2020
 

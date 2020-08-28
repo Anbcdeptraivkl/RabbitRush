@@ -1419,9 +1419,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startWait: 1
-  waveInterval: 0.75
-  minPhase: 1
-  maxPhase: 3
+  waveInterval: 1
+  minPhase: 1.5
+  maxPhase: 4.5
   spawnPosition: {fileID: 1507779031}
   obsPatterns:
   - {fileID: 5402040161417613780, guid: ad298e483fde4a64aa587ae474951862, type: 3}
@@ -2818,5 +2818,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5519948103050095042, guid: 56b95e5ea91f1c846bb7d6fb59f6d03a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 56b95e5ea91f1c846bb7d6fb59f6d03a, type: 3}
