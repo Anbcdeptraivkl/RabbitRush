@@ -16,7 +16,6 @@ public class GameOver: MonoBehaviour {
     Text collectAmount;
     // Highscore on Finish
     GameObject highscoreShow;
-    GameObject background;
 
     public void MainMenu() {
         SceneManager.LoadScene("MainMenu");
@@ -45,7 +44,6 @@ public class GameOver: MonoBehaviour {
         if (highscoreShow.activeSelf) {
             highscoreShow.SetActive(false);
         }
-        background = GameObject.FindWithTag("Background");
     }
 
     void Update() {
@@ -63,8 +61,11 @@ public class GameOver: MonoBehaviour {
         foreach (Obstacle obstacle in obstacles) {
             obstacle.StopMoving();
         }
-        // Stop Background
-        background.GetComponent<Background>().StopScrolling();
+        // Stop Background Scrollings
+        Background[] backgrounds = GameObject.FindObjectsOfType<Background>();
+        foreach (Background bg in backgrounds) {
+            bg.StopScrolling();
+        }
         // Stop Moving Collectibles
         Collectible[] collects = GameObject.FindObjectsOfType<Collectible>();
         foreach (Collectible collect in collects) {

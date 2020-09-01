@@ -4,7 +4,7 @@ using UnityEngine;
 
 // The Obstacle Behaviours
 public class Obstacle: MonoBehaviour {
-    static public float speed;
+    public float speed = 10f;
     Rigidbody2D rgbd;
 
     void Start() {
@@ -18,6 +18,6 @@ public class Obstacle: MonoBehaviour {
 
     void Move() {
         // Moving to the Left at Constant SPeed
-        rgbd.velocity = new Vector2(-speed, 0);
+        rgbd.velocity = new Vector2(-(speed * Score.Difficulty), 0);
     }
 }

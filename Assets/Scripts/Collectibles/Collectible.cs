@@ -27,7 +27,7 @@ public class Collectible : MonoBehaviour
 
     public void Move() {
         // Moving to the Left at Constant SPeed
-        rgbd.velocity = new Vector2(-speed, 0);
+        rgbd.velocity = new Vector2(-(speed * Score.Difficulty), 0);
     }
     
     // Show Collected Amount inside Game Over Screen (Tracked in the )

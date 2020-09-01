@@ -9,6 +9,7 @@ TagManager:
   - SpawnPoint
   - Collectible
   - Background
+  - MainBackground
   layers:
   - Default
   - TransparentFX

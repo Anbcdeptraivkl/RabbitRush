@@ -10,9 +10,19 @@ using UnityEngine.UI;
 public class Score: MonoBehaviour {
     public float timeStep = 1f;
     public Text scoreText;
+    public int scoreThreshold = 100;
+    public int difficultyStep = 100;
+    public float difficultyIncrement = 0.1f;
     static int score = 0;
     Player player;
     float currentStep = 0f;
+    static float difficultyModifier;
+
+    public static float Difficulty {
+        get {
+            return difficultyModifier;
+        }
+    }
 
     public int CurrentScore {
         get {
@@ -40,6 +50,7 @@ public class Score: MonoBehaviour {
 
     void Start() {
         score = 0;
+        difficultyModifier = 1f;
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
         scoreText.text = score.ToString();
     }
@@ -47,6 +58,12 @@ public class Score: MonoBehaviour {
     void Update() {
         if (player.CheckAlive()) {
             UpdateScore();
+        }
+        if (score > scoreThreshold) {
+            // increase Difficulty every 100 points
+            difficultyModifier += 0.1f;
+            Debug.Log("Difficulty Speed Mod: " + difficultyModifier);
+            scoreThreshold += difficultyStep;
         }
     }
 

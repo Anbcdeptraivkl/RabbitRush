@@ -1,10 +1,5 @@
 # [PROGRAMMING]
 
-## DIFFICULTY
-- Scrolling Background without Material Offseting
-- Faster Spawning
-- Increasing Speeds of everything after every 200 Points
-
 ## NEW MECHANICS
 
 ### Actions
@@ -21,10 +16,6 @@
 -  Could be Fly-kicked!
 
 ### Progression
-- The Longer you play, the Faster the Speed become
-  - Scroll Speed
-  - Move SPeed of Obstacle
-
 
 # [UI]
 

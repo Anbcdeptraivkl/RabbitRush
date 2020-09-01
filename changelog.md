@@ -2,11 +2,18 @@
 
 ## [Unreleased]
 
+
+## [1.0.0] - 1/9/2020
+
 ### Added
 - High Score: Storing, Viewing and Reseting
+- Increase Difficulty with Score gained
+  - Added Speed Mofifier based on Difficulty that affect every Values in the game (Obstacles, Collectibles and Background SPeeds)
 
 ### Fixed
-
+- Scrolling Background, Basic Collectibles and Obstacles now Move at the Same Speed as each others
+- Scrolling Background is now fully repeated and compatible with Sprite Renderer
+- Broken Layouts no longer make things visible outside of Camera View
 
 
 ## [Prototype 4] - 24/8/2020
